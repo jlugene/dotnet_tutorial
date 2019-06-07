@@ -1,0 +1,4 @@
+.vs
+**/bin
+**/obj
+dotnet_tutorial.csproj.user
