@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>.NET Core MVC</title>
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="~/images/MSIcon.ico" />
+</head>
+
+<body>
+	<style type="text/css">
+	body{
+		margin-left: auto;
+		margin-right: auto;
+		width: 800px;
+	}
+	img{
+		margin: 10px 0;
+	}
+	pre{
+		font-family:Consolas;
+		background-color: #f0f0f0;
+		padding: 3px 0;
+	}
+	</style>
+
+	<h1>第8课：引入静态资源</h1>
+	<div>
+		<img src="~/images/logo.gif" alt="Merchant Support">
+	</div>
+	<div>注意：Startup.cs里加上：</div>
+	<pre>app.UseStaticFiles();</pre>
+</body>
+</html>
