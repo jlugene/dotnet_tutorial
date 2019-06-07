@@ -1,0 +1,39 @@
+﻿
+@model string[]
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>.NET Core MVC</title>
+</head>
+<body>
+	<style type="text/css">
+	body{
+		margin-left: auto;
+		margin-right: auto;
+		width: 800px;
+	}
+	ul{
+		list-style: none;
+		padding-left:0;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	li{
+		padding: 5px 0;
+	}
+	</style>
+	<h1>Merchant Support .NET Core MVC教程</h1>
+	<div>
+		<ul>
+		@foreach(var item in Model)
+		{
+			<li>
+			<a href="/@item">@item</a>
+			</li>
+		}
+		</ul>
+	</div>
+</body>
+</html>
