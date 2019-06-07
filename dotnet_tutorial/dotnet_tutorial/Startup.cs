@@ -31,7 +31,7 @@ namespace MerchantSupport.Tutorial
 			{
 				routes.MapRoute(
 					name: "default",
-					template: "{controller=Lesson2}/{action=Index}/{id?}");
+					template: "{controller=Lesson3}/{action=Index}/{id?}");
 			});
 		}
 	}
