@@ -1,0 +1,39 @@
+﻿@using MerchantSupport.Tutorial
+
+@model Lesson4Controller.Holiday[]
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>.NET Core MVC</title>
+</head>
+<body>
+	<style type="text/css">
+	body{
+		margin-left: auto;
+		margin-right: auto;
+		width: 800px;
+	}
+	td{
+		padding: 5px 10px;
+	}
+	</style>
+	<h1>第4课: 复杂的模型</h1>
+	<div>
+		<table>
+			<tr>
+				<th>日期</th>
+				<th>名称</th>
+			</tr>
+		@foreach(var item in Model)
+		{
+			<tr>
+				<td>@item.Day.ToString("yyyy/MM/dd")</td>
+				<td>@item.Name</td>
+			</tr>
+		}
+		</table>
+	</div>
+</body>
+</html>
