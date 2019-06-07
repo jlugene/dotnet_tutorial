@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace dotnet_tutorial
+namespace MerchantSupport.Tutorial
 {
 	public class Startup
 	{
@@ -31,7 +31,7 @@ namespace dotnet_tutorial
 			{
 				routes.MapRoute(
 					name: "default",
-					template: "{controller=Lesson1}/{action=Index}/{id?}");
+					template: "{controller=Lesson2}/{action=Index}/{id?}");
 			});
 		}
 	}
