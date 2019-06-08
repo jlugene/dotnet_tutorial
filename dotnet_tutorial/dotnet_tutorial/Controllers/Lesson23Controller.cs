@@ -6,8 +6,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MerchantSupport.Tutorial
 {
-	//第22课：修正数据
-	public class Lesson23Controller : Lesson22Controller
+	//第23课：修正数据
+	public class Lesson23Controller : Lesson21Controller
 	{
 		[HttpGet]
 		public IActionResult Edit(string id)
