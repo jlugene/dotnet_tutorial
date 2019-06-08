@@ -4,7 +4,7 @@ using MerchantSupport.Lib;
 
 namespace MerchantSupport.Tutorial
 {
-	//第20课：数据库查询 - 分页显示列表
+	//第21课：数据库查询2 - 分页显示列表
 	//需要引入MerchantSupport.Lib.Pagination库
 	public class Lesson21Controller : Controller
 	{
