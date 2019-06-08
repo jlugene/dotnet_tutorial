@@ -7,11 +7,18 @@
   <ItemGroup>
     <PackageReference Include="MerchantSupport.Lib.ActiveRecord" Version="0.2.4.3" />
     <PackageReference Include="MerchantSupport.Lib.Mvc.ModelValidation" Version="0.2.4.3" />
+    <PackageReference Include="MerchantSupport.Lib.Mvc.Pagination" Version="0.2.4.3" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Views\Lesson21\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Lesson20\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\Lesson19\Create.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
