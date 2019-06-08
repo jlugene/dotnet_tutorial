@@ -19,13 +19,38 @@
 	.container{
 		max-width:800px;
 	}
-	#img_logo{
-		margin: 20px 0;
+	#header{
+		padding: 25px 0;
+	}
+	#header-logo{
+		float: left;
+		width: 90%;
+	}
+	#header-home{
+		float: left;
+		width: 10%;
+		text-align: right;
+		padding: 12px 0;
+	}
+	h1 {
+    font-size: 24px;
+		padding-top: 20px;
+	}
+	h2 {
+    font-size: 18px;
 	}
 	</style>
-	<div>
-		<img id="img_logo" src="~/images/logo.gif" alt="Merchant Support">
+
+	<div id="header">
+		<div id="header-logo">
+			<img src="~/images/logo.gif" alt="Merchant Support">
+		</div>
+		<div id="header-home" class="col-sm-2">
+			<a href="/">回首页</a>
+		</div>
 	</div>
+
 	@RenderBody()
+
 </body>
 </html>
