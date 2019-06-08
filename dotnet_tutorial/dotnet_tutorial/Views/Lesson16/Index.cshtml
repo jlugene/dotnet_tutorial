@@ -1,0 +1,66 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@using MerchantSupport.Tutorial;
+
+@model Lesson16Controller.Holiday
+
+<style type="text/css">
+.row{
+	margin-top: 10px;
+}
+.validation-summary-errors ul{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.validation-summary-errors li {
+  padding: 3px 0;
+  color: #DC0414;
+  font-weight: bold;
+}
+.input-validation-error{
+  border: solid 1px red;
+}
+</style>
+
+<h1>第16课：模型验证3 - Input TagHelper</h1>
+<h2>填写假日</h2>
+
+<form action="/lesson16/show" method="post">
+	<div class="row">
+		<div class="col-sm-3">
+			<label>假日日期</label>
+		</div>
+
+		<div class="col-sm-9">
+			<input type="text" asp-for="Day" />
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-3">
+			<label>假日名称</label>
+		</div>
+		<div class="col-sm-9">
+			<input type="text" asp-for="Name" />
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-sm-3">
+		</div>
+		<div class="col-sm-9">
+			<div asp-validation-summary="All"></div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-3">
+		</div>
+		<div class="col-sm-9">
+		<input type="submit" value="提交"/>
+		</div>
+	</div>
+</form>
