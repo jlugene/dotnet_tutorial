@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@using MerchantSupport.Tutorial;
+@using MerchantSupport.Lib;
+
+@model T_Holiday
+
+<h1>第18课：数据库操作-提交表单完成数据库insert</h1>
+
+<div><b>创建成功!</b></div>
+
+<div>假日ID: @Model.Id</div>
+<div>假日日期: @Model.Holiday.ToJapanDate()</div>
+<div>假日名称: @Model.Holiday_Name</div>

@@ -1,0 +1,83 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@using MerchantSupport.Tutorial;
+
+@model Lesson18Controller.HolidayVo
+
+<style type="text/css">
+.row{
+	margin-top: 10px;
+}
+.validation-summary-errors ul{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.validation-summary-errors li {
+  padding: 3px 0;
+  color: #DC0414;
+  font-weight: bold;
+}
+.input-validation-error{
+  border: solid 1px red;
+}
+pre{
+	margin-top: 50px;
+}
+</style>
+
+<h1>第18课：数据库操作-提交表单完成数据库insert</h1>
+<h2>填写假日</h2>
+
+<form action="/lesson18/create" method="post">
+	<div class="row">
+		<div class="col-sm-3">
+			<label>假日日期</label>
+		</div>
+
+		<div class="col-sm-9">
+			<input type="text" asp-for="Day" />
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-3">
+			<label>假日名称</label>
+		</div>
+		<div class="col-sm-9">
+			<input type="text" asp-for="Name" />
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-sm-3">
+		</div>
+		<div class="col-sm-9">
+			<div asp-validation-summary="All"></div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-3">
+		</div>
+		<div class="col-sm-9">
+		<input type="submit" value="提交"/>
+		</div>
+	</div>
+</form>
+
+<pre>
+ 第18课开始前，需要先创建数据库并执行下面的sql：
+
+ create database dotnet_tutorial;
+ use dotnet_tutorial;
+ create table `t_holiday` (
+   `id`           int(11)      not null auto_increment comment 'id',
+   `holiday`      date         not null                comment '假日日期',
+   `holiday_name` varchar(100)                         comment '假日名称',
+   primary key (`id`)
+ )
+ comment='节假日表' COLLATE='utf8mb4_unicode_ci' ENGINE=InnoDB;
+</pre>
