@@ -9,9 +9,9 @@ namespace MerchantSupport.Tutorial
 			return View();
 		}
 
-		public string Show(string holidayName, string holidayDate)
+		public string Show(string day, string name)
 		{
-			return $"假日日期：{holidayDate}; 假日名称：{holidayName}";
+			return $"假日日期：{day}; 假日名称：{name}";
 		}
 	}
 }
