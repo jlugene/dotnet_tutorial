@@ -1,0 +1,57 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@using MerchantSupport.Lib;
+@using MerchantSupport.Tutorial;
+
+@model PagingModel
+
+<style type="text/css">
+.row{
+	margin-top: 10px;
+}
+table{
+	width: 100%;
+}
+table th{
+	text-align:center;
+	font-weight: bold;
+}
+table td{
+	padding: 2px 4px;
+}
+.pagination{
+  display: block;
+  text-align: center;
+  margin: 30px 0 20px 0;
+}
+.pagination a,.pagination strong{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+</style>
+
+<h1>第20课：数据库查询 - 单页显示列表</h1>
+<h2>假日列表</h2>
+<table class="table-bordered table-hover table-striped">
+	<tbody>
+		<tr>
+			<th>ID</th>
+			<th>日期</th>
+			<th>名称</th>
+		</tr>
+		@foreach(T_Holiday record in Model.Records.GetRecords())
+		{
+			 <tr>
+				 <td>@record.Id</td>
+				 <td>@record.Holiday.ToJapanDate()</td>
+				 <td>@record.Holiday_Name</td>
+			 </tr>
+		}
+	</tbody>
+</table>
+
+@Model.Pagination()
+
+<a href="/lesson22/download">下载csv</a>
